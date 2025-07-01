@@ -276,7 +276,7 @@ jobs:
             if [[ -d "Anykernel3" ]]; then
               echo "Found Anykernel3 in Kernel!"
             else
-              git clone https://github.com/osm0sis/Anykernel3.git -b master Anykernel3
+              git clone -b master --depth=1 https://github.com/osm0sis/Anykernel3.git Anykernel3
             fi
           elif [[ ${{ env.PACK_METHOD }} == "MKBOOTIMG" ]]; then
             cd $GITHUB_WORKSPACE
